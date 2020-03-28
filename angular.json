@@ -24,9 +24,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/button.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -89,7 +92,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -120,6 +124,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "MatPortfolio"
+    }
+  },
+  "defaultProject": "MatPortfolio",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

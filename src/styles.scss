@@ -1,0 +1,275 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.titleCard{
+    width: 380px;
+    height: 180px;
+    margin: 0 auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+$secondary:#f64c72;
+
+body{
+    font-family: Montserrat, sans-serif;
+}
+
+.splash{
+    margin-right: 0px;
+}
+
+.path1{
+        overflow: visible;
+		position: absolute;
+}
+header{
+    height: 200px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    /*background-image: url('assets/images/Path 1.png');
+    background-repeat: no-repeat;
+    background-position: right 20px bottom 20px;*/
+
+    h2{
+        flex: 1.4;
+        display: flex;
+        margin-right: 30px;
+        margin-left: 30px;
+        font-size: 45px;
+        font-weight: lighter;
+        color: #2f2fa2;
+    }
+    nav{
+        flex: 1; /*This means it will span across the whole row*/
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                display: inline-block;
+                font-size: 18px;
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #2f2fa2;
+                    padding: 9px 9px;
+                    font-weight: lighter;                  
+
+                }
+
+                img{
+                    position: absolute;
+                    top: 0px;
+                    right: 1px;
+                }
+
+                &.active{
+                    a{
+                        background-color: $secondary;
+                        opacity: 0.78;
+                        border-radius: 0.85em;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.workexp{
+    font-family: Montserrat, sans-serif;
+
+    
+    .jobs{
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 850px;
+        font-family: Montserrat, sans-serif;
+        
+        border-style: thin;
+        box-shadow: 0px 10px 10px 5px grey;
+
+
+        mat-list-item{
+            font-family: Montserrat, sans-serif;
+
+        }
+    }
+}
+
+.projects{
+    font-family: Montserrat, sans-serif;
+    flex: 1;
+    align-content: center;
+
+    ul{
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+
+            li{
+            display: inline-block;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            img.calc{
+                margin: 0 auto;
+                height: 318px;
+                width: 514px;
+            }
+            mat-icon{
+                padding: 8px;
+            }
+        }
+    }
+
+    .projectCard{
+        position: relative;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        width: 500px;
+       
+        font-family: Montserrat, sans-serif;
+        background-color: #8A8AFE;
+        border-style: none;
+        box-shadow: 0px 10px 10px 5px grey;
+
+
+        mat-list-item{
+            font-family: Montserrat, sans-serif;
+
+        }
+    }
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    
+    .imgHolder{
+        img{
+            height: 318px;
+            width: 514px;
+        }
+        
+    }
+    .imgHolder:hover img{
+        opacity: 0.3;
+    }
+
+    .imgHolder:hover .middle{
+        opacity: 1;
+    }
+
+    
+    .card{
+        border-radius: 0.8em;
+        width: 350px;
+        height: 170px;
+        margin-left: 30px;
+        justify-content: center;
+
+    }
+}
+
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.middle2{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 12%;
+  top: 82%;
+
+  text-align: center;
+}
+
+.middle3{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    right: 14%;
+    top: 82%;
+  
+    text-align: center;
+  }
+
+.content2{
+    display: flex;
+    
+    align-items: center;
+
+    h3{
+        font-size: 30px;
+        color: #f64c72;
+    }
+
+    .imgHolder{
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+
+        img{
+            height: 318px;
+            width: 514px;
+        }
+    }
+
+    .imgHolder:hover img{
+        opacity: 0.3;
+    }
+
+    .imgHolder:hover .middle2{
+        opacity: 1;
+    }
+
+    .imgHolder:hover .middle3{
+        opacity: 1;
+    }
+}
+
+
+
+
+.matbtn button{
+    margin-top: 9px;
+    margin-right: 10px;
+    margin-bottom: 9px;
+}
+
+.matbtn2 a img{
+    padding: 10px;
+}
+
+.pic{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    display: block;
+    width: 30%;
+    border-radius: 50%;
+}
+
+  ul > li {
+    display: inline-block;
+    /* You can also add some margins here to make it look prettier */
+    padding: 20px;
+    zoom:1;
+    
+    /* this fix is needed for IE7- */
+}
+
+
