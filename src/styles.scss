@@ -56,13 +56,19 @@ header{
                     color: #2f2fa2;
                     padding: 9px 9px;
                     font-weight: lighter;                  
-
                 }
 
                 img{
                     position: absolute;
                     top: 0px;
                     right: 1px;
+                }
+
+                a:hover{
+                    background-color: $secondary;
+                    opacity: 0.78;
+                    border-radius: 0.85em;
+                    font-weight: bold;
                 }
 
                 &.active{
