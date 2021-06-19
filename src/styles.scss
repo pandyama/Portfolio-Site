@@ -1,189 +1,324 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
-.titleCard{
-    width: 380px;
-    height: 180px;
-    margin: 0 auto;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+.titleCard {
+  width: 380px;
+  height: 180px;
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-$secondary:#f64c72;
+$secondary: #ff6788;
+$white: white;
+$font: "Comfortaa";
+$work: #ff94ac;
 
-body{
-    font-family: Montserrat, sans-serif;
+body {
+  font-family: $font, sans-serif;
 }
 
-.splash{
-    margin-right: 0px;
+.splash {
+  margin-right: 0px;
 }
 
-.path1{
-        overflow: visible;
-		position: absolute;
+.path1 {
+  overflow: visible;
+  position: absolute;
 }
-header{
-    height: 200px;
+header {
+  height: 200px;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+
+  h2 {
+    flex: 1.4;
     display: flex;
-    padding: 20px;
-    align-items: center;
-    /*background-image: url('assets/images/Path 1.png');
-    background-repeat: no-repeat;
-    background-position: right 20px bottom 20px;*/
-
-    h2{
-        flex: 1.4;
-        display: flex;
-        margin-right: 30px;
-        margin-left: 30px;
-        font-size: 45px;
-        font-weight: lighter;
-        color: #2f2fa2;
-    }
-    nav{
-        flex: 1; /*This means it will span across the whole row*/
-        ul{
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li{
-                display: inline-block;
-                font-size: 18px;
-                a{
-                    display: inline-block;
-                    text-decoration: none;
-                    color: #2f2fa2;
-                    padding: 9px 9px;
-                    font-weight: lighter;                  
-                }
-
-                img{
-                    position: absolute;
-                    top: 0px;
-                    right: 1px;
-                }
-
-                a:hover{
-                    background-color: $secondary;
-                    opacity: 0.78;
-                    border-radius: 0.85em;
-                    font-weight: bold;
-                }
-
-                &.active{
-                    a{
-                        background-color: $secondary;
-                        opacity: 0.78;
-                        border-radius: 0.85em;
-                        font-weight: bold;
-                    }
-                }
-            }
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 55px;
+    font-family: $font;
+    font-weight: lighter;
+    color: #2f2fa2;
+  }
+  nav {
+    flex: 1; /*This means it will span across the whole row*/
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        a {
+          display: inline-block;
+          background-color: $secondary;
+          text-decoration: none;
+          font-size: 24px;
+          color: black;
+          //   font-weight: bold;
+          //   margin: 15px;
+          padding: 12px;
+          border-radius: 6px;
+          border: none;
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
         }
+
+        img {
+          position: absolute;
+          top: 0px;
+          right: 1px;
+        }
+
+        a:hover {
+          background-color: $white;
+          color: black;
+          box-shadow: -3px 3px 10px rgba(black, 0.5);
+          transition: all 0.2s linear;
+          transition-property: background-color, color, box-shadow;
+        }
+
+        &.active {
+          a {
+            background-color: $white;
+            color: black;
+            box-shadow: -3px 3px 10px rgba(black, 0.5);
+            transition: all 0.2s linear;
+            transition-property: background-color, color, box-shadow;
+          }
+        }
+      }
     }
+  }
 }
 
-.workexp{
-    font-family: Montserrat, sans-serif;
+.workexp {
+  font-family: $font, sans-serif;
 
-    
-    .jobs{
-        position: relative;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        width: 850px;
-        font-family: Montserrat, sans-serif;
-        
-        border-style: thin;
-        box-shadow: 0px 10px 10px 5px grey;
-
-
-        mat-list-item{
-            font-family: Montserrat, sans-serif;
-
-        }
+  .jobs {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 900px;
+    // height: 680px;
+    border-style: thin;
+    box-shadow: 0px 8px 7px 5px grey;
+    mat-card {
+      padding: 10px;
     }
-}
-
-.projects{
-    font-family: Montserrat, sans-serif;
-    flex: 1;
-    align-content: center;
-
-    ul{
-            margin: 0 auto;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-
-            li{
-            display: inline-block;
+    mat-card-title {
+      font-family: $font;
+      font-size: 28px;
+    }
+    mat-list-item {
+      font-family: $font, sans-serif;
+      font-size: 20px;
+      margin: 10px;
+    }
+    .mean{
+        // background-color: rgb(85, 85, 85);
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: black;
+        color: black;
+        .meanTitle{
+            color:black;
+            font-size: 20px;
+        }
+        .meanItem{
+            color: black;
             font-size: 18px;
-            margin-bottom: 20px;
-
-            img.calc{
-                margin: 0 auto;
-                height: 318px;
-                width: 514px;
-            }
-            mat-icon{
-                padding: 8px;
-            }
+        }
+        mat-card-subtitle{
+            color: black;
         }
     }
+  }
+  .jobs:hover {
+    mat-list-item {
+      font-size: 21px;
+    }
+    mat-card-title {
+      font-weight: bolder;
+      font-size: 29px;
+    }
+    box-shadow: 0px 5px 10px 3px rgb(175, 175, 175, 2);
+    background-color: $work;
+    transition: all 0.2s linear;
+    transition-property: background-color, color, box-shadow, font-weight,
+      font-size;
+  }
 
-    .projectCard{
-        position: relative;
-        margin: 0 auto;
-        margin-bottom: 30px;
-        width: 500px;
-       
-        font-family: Montserrat, sans-serif;
-        background-color: #8A8AFE;
-        border-style: none;
-        box-shadow: 0px 10px 10px 5px grey;
 
 
-        mat-list-item{
-            font-family: Montserrat, sans-serif;
-
+  .jobsEvertz {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 900px;
+    height: 680px;
+    border-style: thin;
+    box-shadow: 0px 8px 7px 5px grey;
+    mat-card {
+      padding: 10px;
+    }
+    mat-card-title {
+      font-family: $font;
+      font-size: 28px;
+    }
+    mat-list-item {
+      font-family: $font, sans-serif;
+      font-size: 20px;
+      margin: 10px;
+    }
+    .mean{
+        // background-color: rgb(85, 85, 85);
+        border-style: solid;
+        border-width: 0.5px;
+        border-color: black;
+        color: black;
+        .meanTitle{
+            color:black;
+            font-size: 20px;
+        }
+        .meanItem{
+            color: black;
+            font-size: 18px;
+        }
+        mat-card-subtitle{
+            color: black;
         }
     }
+  }
+  .jobsEvertz:hover {
+    mat-list-item {
+      font-size: 21px;
+    }
+    mat-card-title {
+      font-weight: bolder;
+      font-size: 29px;
+    }
+    box-shadow: 0px 5px 10px 3px rgb(175, 175, 175, 2);
+    background-color: $work;
+    transition: all 0.2s linear;
+    transition-property: background-color, color, box-shadow, font-weight,
+      font-size;
+  }
+
 }
 
-.content{
+.contact {
+  ul {
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    
-    .imgHolder{
-        img{
-            height: 318px;
-            width: 514px;
-        }
-        
+    li {
+      display: inline-block;
+      margin-bottom: 20px;
+      h4 {
+        margin: 7px;
+        font-family: $font;
+        font-size: 25px;
+      }
     }
-    .imgHolder:hover img{
-        opacity: 0.3;
-    }
-
-    .imgHolder:hover .middle{
-        opacity: 1;
-    }
-
-    
-    .card{
-        border-radius: 0.8em;
-        width: 350px;
-        height: 170px;
-        margin-left: 30px;
-        justify-content: center;
-
-    }
+  }
 }
 
-.middle{
-  transition: .5s ease;
+.projects {
+  font-family: $font, sans-serif;
+  flex: 1;
+  align-content: center;
+
+  ul {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+    li {
+      display: inline-block;
+      margin-bottom: 20px;
+      mat-list-item {
+        font-family: $font, sans-serif;
+        font-size: 22px;
+        // margin: 7px;
+      }
+
+      img.calc {
+        margin: 0 auto;
+        height: 318px;
+        width: 514px;
+      }
+      mat-icon {
+        padding: 8px;
+      }
+    }
+  }
+
+  .projectCard {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 700px;
+    background-color: #9191ff;
+    box-shadow: 0px -5px 10px 3px rgb(175, 175, 175, 2);
+    mat-card {
+      padding: 10px;
+    }
+    mat-card-title {
+      font-family: $font;
+      font-size: 28px;
+    }
+    mat-list-item {
+      font-family: $font, sans-serif;
+      font-size: 22px;
+      margin: 7px;
+    }
+  }
+  .projectCard:hover {
+    mat-list-item {
+      font-size: 23px;
+    }
+    mat-card-title {
+      font-weight: bolder;
+      font-size: 29px;
+    }
+    box-shadow: 0px 5px 10px 3px rgb(175, 175, 175, 2);
+    background-color: $white;
+    transition: all 0.2s linear;
+    transition-property: background-color, color, box-shadow, font-weight,
+      font-size;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+
+  .imgHolder {
+    img {
+      height: 318px;
+      width: 514px;
+    }
+  }
+  .imgHolder:hover img {
+    opacity: 0.3;
+  }
+
+  .imgHolder:hover .middle {
+    opacity: 1;
+  }
+
+  .card {
+    border-radius: 0.8em;
+    width: 350px;
+    height: 170px;
+    margin-left: 30px;
+    justify-content: center;
+  }
+}
+
+.middle {
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -191,91 +326,93 @@ header{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  .text {
+    font-size: 30px;
+  }
 }
 
-.middle2{
-  transition: .5s ease;
+.middle2 {
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   left: 12%;
   top: 82%;
-
   text-align: center;
+  .text2 {
+    font-size: 30px;
+  }
 }
 
-.middle3{
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    right: 14%;
-    top: 82%;
-  
-    text-align: center;
+.middle3 {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  right: 14%;
+  top: 82%;
+  text-align: center;
+  .text3 {
+    font-size: 30px;
+  }
+}
+
+.content2 {
+  display: flex;
+
+  align-items: center;
+
+  h3 {
+    font-size: 30px;
+    color: #f64c72;
   }
 
-.content2{
+  .imgHolder {
+    flex: 0.8;
     display: flex;
-    
-    align-items: center;
+    justify-content: center;
 
-    h3{
-        font-size: 30px;
-        color: #f64c72;
+    img {
+      height: 318px;
+      width: 514px;
     }
+  }
 
-    .imgHolder{
-        flex: 0.8;
-        display: flex;
-        justify-content: center;
+  .imgHolder:hover img {
+    opacity: 0.3;
+  }
 
-        img{
-            height: 318px;
-            width: 514px;
-        }
-    }
+  .imgHolder:hover .middle2 {
+    opacity: 1;
+  }
 
-    .imgHolder:hover img{
-        opacity: 0.3;
-    }
-
-    .imgHolder:hover .middle2{
-        opacity: 1;
-    }
-
-    .imgHolder:hover .middle3{
-        opacity: 1;
-    }
+  .imgHolder:hover .middle3 {
+    opacity: 1;
+  }
 }
 
-
-
-
-.matbtn button{
-    margin-top: 9px;
-    margin-right: 10px;
-    margin-bottom: 9px;
+.matbtn button {
+  margin-top: 9px;
+  margin-right: 10px;
+  margin-bottom: 9px;
 }
 
-.matbtn2 a img{
-    padding: 10px;
+.matbtn2 a img {
+  padding: 10px;
 }
 
-.pic{
-    position: absolute;
-    right: 2px;
-    top: 2px;
-    display: block;
-    width: 30%;
-    border-radius: 50%;
+.pic {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  display: block;
+  width: 30%;
+  border-radius: 50%;
 }
 
-  ul > li {
-    display: inline-block;
-    /* You can also add some margins here to make it look prettier */
-    padding: 20px;
-    zoom:1;
-    
-    /* this fix is needed for IE7- */
+ul > li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  padding: 20px;
+  zoom: 1;
+
+  /* this fix is needed for IE7- */
 }
-
-

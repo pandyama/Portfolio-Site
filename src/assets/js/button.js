@@ -1,17 +1,17 @@
+function active() {
+  var buttons = document.getElementsByClassName("btn");
 
-function active(){
-var buttons = document.getElementsByClassName("btn");
-
-console.log(window.location.href);
-
-for(var i = 0; i < buttons.length; i++){
+  for (var i = 0; i < buttons.length; i++) {
     console.log("inside For loop");
-    console.log(buttons);
-    buttons[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
+    buttons[i].addEventListener("click", function () {
+      var current = document.getElementsByClassName("active");
+      console.log(current);
+      if(current.length > 0){
+        console.log("Current length is > 0");
         console.log(current);
         current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
+      }
+      this.className += " active";
     });
-}
+  }
 }
